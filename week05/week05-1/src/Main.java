@@ -8,6 +8,7 @@ void main() {
     int area;
     boolean flag;
 
+
     System.out.print("사각형의 가로 길이 입력 (예 5) : ");
     width = keyboard.nextInt();
     System.out.print("사각형의 세로 길이 입력 (예 5) : ");
@@ -18,10 +19,11 @@ void main() {
     type = (width == height) ? '정' : '직';
     area = width * height;
 
-    String result = flag == true ? String.format("*** %c 사각형 넓이 ***\n\t가로 길이 : %,d Cm\n\t세로 길이 : %,ㅇ Cm
-            \t)
+    String result = flag
+            ? String.format("*** %c 사각형 넓이 ***\n가로 길이 : %d cm\n세로 길이 : %d cm\n넓이 : %d cm\n",
+            type, width, height, area)
+            : "Data 오류 입니다";
 
-            넓 이 : %,d \u33a0\n",type, width, height, area) : "Data 오류 입니다";
 
         System.out.println(result);
 }
